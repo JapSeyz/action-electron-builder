@@ -1,5 +1,5 @@
-name: Electron Builder Action
-author: Samuel Meuli
+name: Electron Builder Action for Quasar
+author: Samuel Meuli & Jesper Jacobsen
 description: GitHub Action for building and releasing Electron apps
 
 inputs:
