@@ -89,8 +89,9 @@ const runAction = () => {
 		exit(`\`package.json\` file not found at path "${pkgJsonPath}"`);
 	}
 
-	// Copy "github_token" input variable to "GH_TOKEN" env variable (required by `electron-builder`)
-	setEnv("GH_TOKEN", getInput("github_token", true));
+	// Copy AWS credentials
+	setEnv("AWS_ACCESS_KEY_ID", getInput("AWS_ACCESS_KEY_ID", true));
+	setEnv("AWS_SECRET_ACCESS_KEY", getInput("AWS_SECRET_ACCESS_KEY", true));
 
 	// Require code signing certificate and password if building for macOS. Export them to environment
 	// variables (required by `electron-builder`)
