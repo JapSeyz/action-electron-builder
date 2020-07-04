@@ -90,8 +90,8 @@ const runAction = () => {
 	}
 
 	// Copy AWS credentials
-	setEnv("AWS_ACCESS_KEY_ID", getInput("AWS_ACCESS_KEY_ID", true));
-	setEnv("AWS_SECRET_ACCESS_KEY", getInput("AWS_SECRET_ACCESS_KEY", true));
+	setEnv("AWS_ACCESS_KEY_ID", getInput("aws_access_key_id", true));
+	setEnv("AWS_SECRET_ACCESS_KEY", getInput("aws_secret_access_key", true));
 
 	// Require code signing certificate and password if building for macOS. Export them to environment
 	// variables (required by `electron-builder`)
